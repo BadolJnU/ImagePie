@@ -38,3 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 Key Point:
 
 1. Using Clerk - user management system to manage the user.
+2. using Button, Sheet component from shadecn.
+3. NextJS is a serverless function. so i optimize a the code, when connection is created it stored in the cached, so everytime create a new request it checked there is a connection in cache or not.if no connection in cache then create a new connection.
