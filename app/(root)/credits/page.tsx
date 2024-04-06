@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const CreditPage = () => {
-  return (
-    <div>CreditPage</div>
-  )
-}
+const page = () => {
+  return <div>page</div>;
+};
 
-export default CreditPage
+export default page;
