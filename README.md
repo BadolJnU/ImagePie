@@ -1,39 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Follow these steps to set up the project locally on your machine.
 
-## Getting Started
+Prerequisites
 
-First, run the development server:
+Make sure you have the following installed on your machine:
 
-```bash
+Git
+Node.js
+npm (Node Package Manager)
+Cloning the Repository
+
+git clone https://github.com/BadolJnU/ImagePie.git
+cd ImagePie
+Installation
+
+Install the project dependencies using npm:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Set Up Environment Variables
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a new file named .env.local in the root of your project and add the following content:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#NEXT
+NEXT_PUBLIC_SERVER_URL=
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#MONGODB
+MONGODB_URL=
 
-## Learn More
+#CLERK
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+WEBHOOK_SECRET=
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#CLOUDINARY
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the Clerk, MongoDB, Cloudinary.
 
-## Deploy on Vercel
+Running the Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm run dev
+Open http://localhost:3000 in your browser to view the project.
 
 Home_Url: https://image-pie.vercel.app/
 
@@ -42,3 +55,6 @@ Key Point:
 1. Using Clerk - user management system to manage the user.
 2. using Button, Sheet component from shadecn.
 3. NextJS is a serverless function. so i optimize a the code, when connection is created it stored in the cached, so everytime create a new request it checked there is a connection in cache or not.if no connection in cache then create a new connection.
+4. Using Cloudinary to manipulate the image like image restoration, recoloring, object removal, generative filling, and background removal.
+5. Save the images on the database.
+6. Advanced image search functionalities.
